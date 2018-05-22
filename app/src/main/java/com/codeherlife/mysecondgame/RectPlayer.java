@@ -14,9 +14,13 @@ public class RectPlayer implements GameObject {
     private Rect rectangle;
     private int color;
 
+    public Rect getRectangle(){
+        return rectangle;
+    }
+
     public RectPlayer(Rect rectangle, int color){
         this.rectangle = rectangle;
-        this.color = color
+        this.color = color;
     }
 
     @Override
