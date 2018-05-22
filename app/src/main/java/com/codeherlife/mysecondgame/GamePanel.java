@@ -61,7 +61,14 @@ public class GamePanel extends SurfaceView implements SurfaceHolder.Callback {
 
     @Override
     public boolean onTouchEvent(MotionEvent event){
-        return super.onTouchEvent(event);
+
+        switch (event.getAction()){
+            case MotionEvent.ACTION_DOWN;
+            case MotionEvent.ACTION_MOVE;
+                playerPoint.set((int)event.getX(), (int)event.getY());
+        }
+        return true;
+        //return super.onTouchEvent(event);
     }
 
     public void update(){
@@ -71,6 +78,10 @@ public class GamePanel extends SurfaceView implements SurfaceHolder.Callback {
     @Override
     public void draw(Canvas canvas){
         super.draw(canvas);
+
+        canvas.drawColor(Color.WHITE);
+
+        player.draw(canvas);
 
     }
 }
