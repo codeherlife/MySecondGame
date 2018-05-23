@@ -63,6 +63,7 @@ public class GamePanel extends SurfaceView implements SurfaceHolder.Callback {
     public boolean onTouchEvent(MotionEvent event){
 
         switch (event.getAction()){
+            //problems here -how to fix?
             case MotionEvent.ACTION_DOWN;
             case MotionEvent.ACTION_MOVE;
                 playerPoint.set((int)event.getX(), (int)event.getY());
