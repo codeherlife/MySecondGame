@@ -13,6 +13,18 @@ public class Obstacle implements GameObject{
     private Rect rectangle2;
     private int color;
 
+    public Rect getRectangle(){
+        return rectangle;
+    }
+
+    public void incrementY(float Y){
+        rectangle.top += y;
+        rectangle.bottom += y;
+        rectangle2.top += y;
+        rectangle2.bottom += y;
+
+    }
+
 
     public Obstacle (int rectHeight, int color, int startX, int startY, int playerGap){
         this.color = color;
