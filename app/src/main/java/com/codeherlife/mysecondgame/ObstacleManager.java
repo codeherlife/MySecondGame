@@ -49,7 +49,7 @@ public class ObstacleManager {
             ob.incrementY(speed * elapsedTime);
         }
         if(obstacles.get(obstacles.size() - 1).getRectangle().top >= Constants.SCREEN_HEIGHT){
-            obstacles.add(0, new Obstacle(obstacleHeight, color, xStart, obstacles.get(0).getRectangle.top + obstacleHeight + obstacleGap, playerGap));
+            obstacles.add(0, new Obstacle(obstacleHeight, color, xStart, obstacles.get(0).getRectangle.top - obstacleHeight - obstacleGap, playerGap));
             obstacles.remove(obstacles.size() -1);
         }
 
